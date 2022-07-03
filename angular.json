@@ -10,6 +10,7 @@
     "orders": "apps/orders",
     "orders-domain": "libs/orders/domain",
     "orders-e2e": "apps/orders-e2e",
-    "orders-feature-manage-orders": "libs/orders/feature-manage-orders"
+    "orders-feature-manage-orders": "libs/orders/feature-manage-orders",
+    "shared-ui-components": "libs/shared/ui-components"
   }
 }

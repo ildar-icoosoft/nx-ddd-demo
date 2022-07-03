@@ -22,6 +22,9 @@
       "@nx-ddd-demo/orders/domain": ["libs/orders/domain/src/index.ts"],
       "@nx-ddd-demo/orders/feature-manage-orders": [
         "libs/orders/feature-manage-orders/src/index.ts"
+      ],
+      "@nx-ddd-demo/shared/ui-components": [
+        "libs/shared/ui-components/src/index.ts"
       ]
     }
   },
