@@ -25,7 +25,8 @@
       ],
       "@nx-ddd-demo/shared/ui-components": [
         "libs/shared/ui-components/src/index.ts"
-      ]
+      ],
+      "@nx-ddd-demo/shared/util-core": ["libs/shared/util-core/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
