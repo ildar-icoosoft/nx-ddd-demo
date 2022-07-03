@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/orders/feature-manage-orders",
+  "sourceRoot": "libs/orders/feature-manage-orders/src",
+  "prefix": "orders",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/orders/feature-manage-orders"],
+      "options": {
+        "jestConfig": "libs/orders/feature-manage-orders/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/orders/feature-manage-orders/src/**/*.ts",
+          "libs/orders/feature-manage-orders/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:orders", "type:feature"]
+}

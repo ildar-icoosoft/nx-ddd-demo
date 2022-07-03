@@ -1,0 +1,9 @@
+<h1>orders-manage orders</h1>
+
+<table class="table">
+  <tr *ngFor="let order of orderList$ | async">
+    <td>{{ order.id }}</td>
+    <td>{{ order.name }}</td>
+    <td>{{ order.description }}</td>
+  </tr>
+</table>

@@ -8,6 +8,7 @@
     "invoices-e2e": "apps/invoices-e2e",
     "orders": "apps/orders",
     "orders-domain": "libs/orders/domain",
-    "orders-e2e": "apps/orders-e2e"
+    "orders-e2e": "apps/orders-e2e",
+    "orders-feature-manage-orders": "libs/orders/feature-manage-orders"
   }
 }
