@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/orders/domain",
+  "sourceRoot": "libs/orders/domain/src",
+  "prefix": "orders",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/orders/domain"],
+      "options": {
+        "jestConfig": "libs/orders/domain/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/orders/domain/src/**/*.ts",
+          "libs/orders/domain/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:orders", "type:domain-logic"]
+}

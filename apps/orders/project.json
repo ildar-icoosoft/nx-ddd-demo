@@ -1,0 +1,91 @@
+{
+  "projectType": "application",
+  "root": "apps/orders",
+  "sourceRoot": "apps/orders/src",
+  "prefix": "nx-ddd-demo",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/orders",
+        "index": "apps/orders/src/index.html",
+        "main": "apps/orders/src/main.ts",
+        "polyfills": "apps/orders/src/polyfills.ts",
+        "tsConfig": "apps/orders/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/orders/src/favicon.ico", "apps/orders/src/assets"],
+        "styles": ["apps/orders/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/orders/src/environments/environment.ts",
+              "with": "apps/orders/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "orders:build:production"
+        },
+        "development": {
+          "browserTarget": "orders:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "orders:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/orders/src/**/*.ts",
+          "apps/orders/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/orders"],
+      "options": {
+        "jestConfig": "apps/orders/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["domain:orders", "type:app"]
+}
