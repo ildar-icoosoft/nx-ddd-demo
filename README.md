@@ -109,5 +109,17 @@ Visit [Nx Cloud](https://nx.app/) to learn more.
 1. Create domain with app
 ```
 ng g @angular-architects/ddd:domain orders --addApp
+
+ng g @angular-architects/ddd:domain invoices --addApp --ngrx
+```
+2. create features, ui, utils
+```
+ng g @angular-architects/ddd:feature --name="manage orders" --domain=orders --app=orders --entity=order
+
+ng g @angular-architects/ddd:feature --name="manage invoices" --domain=invoices --app=invoices --entity=invoice --ngrx
+
+ng g @angular-architects/ddd:ui --name="components" --shared
+
+ng g @angular-architects/ddd:util --name="core" --shared
 ```
 
