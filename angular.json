@@ -6,6 +6,7 @@
     "invoices": "apps/invoices",
     "invoices-domain": "libs/invoices/domain",
     "invoices-e2e": "apps/invoices-e2e",
+    "invoices-feature-manage-invoices": "libs/invoices/feature-manage-invoices",
     "orders": "apps/orders",
     "orders-domain": "libs/orders/domain",
     "orders-e2e": "apps/orders-e2e",

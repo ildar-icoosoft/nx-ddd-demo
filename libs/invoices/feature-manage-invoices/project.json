@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/invoices/feature-manage-invoices",
+  "sourceRoot": "libs/invoices/feature-manage-invoices/src",
+  "prefix": "invoices",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/invoices/feature-manage-invoices"],
+      "options": {
+        "jestConfig": "libs/invoices/feature-manage-invoices/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/invoices/feature-manage-invoices/src/**/*.ts",
+          "libs/invoices/feature-manage-invoices/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:invoices", "type:feature"]
+}
