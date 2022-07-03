@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/invoices/domain",
+  "sourceRoot": "libs/invoices/domain/src",
+  "prefix": "invoices",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/invoices/domain"],
+      "options": {
+        "jestConfig": "libs/invoices/domain/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/invoices/domain/src/**/*.ts",
+          "libs/invoices/domain/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:invoices", "type:domain-logic"]
+}

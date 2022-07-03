@@ -19,6 +19,10 @@
               {
                 "sourceTag": "domain:orders",
                 "onlyDependOnLibsWithTags": ["domain:orders", "domain:shared"]
+              },
+              {
+                "sourceTag": "domain:invoices",
+                "onlyDependOnLibsWithTags": ["domain:invoices", "domain:shared"]
               }
             ]
           }
